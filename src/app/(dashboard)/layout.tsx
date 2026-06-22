@@ -70,8 +70,8 @@ export default function DashboardLayout({
             sidebarOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
-          <div className="flex items-center justify-between p-6">
-              <div className="flex items-center gap-2">
+          <div className="flex items-center justify-between p-4 pb-2">
+              <div className="flex items-center gap-1">
                 <img src="/logo.png" alt="PaperAI" className="h-[200px] w-[200px] object-contain" />
                 <motion.h1
                   className="text-lg font-semibold tracking-tight"
@@ -87,8 +87,8 @@ export default function DashboardLayout({
             </button>
           </div>
 
-          <div className="mx-6 my-4 h-px bg-gradient-to-r from-[#22C55E]/30 via-[#22C55E]/10 to-transparent" />
-          <nav className="space-y-1 px-3">
+          <div className="mx-4 my-2 h-px bg-gradient-to-r from-[#22C55E]/30 via-[#22C55E]/10 to-transparent" />
+          <nav className="space-y-1 px-2">
             {navItems.map((item, i) => {
               const Icon = item.icon
               const isActive = pathname === item.href || pathname.startsWith(item.href + '/')
