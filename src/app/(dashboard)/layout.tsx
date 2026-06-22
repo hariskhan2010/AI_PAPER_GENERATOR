@@ -72,8 +72,8 @@ export default function DashboardLayout({
         >
           <div className="flex items-center justify-between p-6">
               <div className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#22C55E] to-[#16A34A] shadow-lg shadow-[#22C55E]/20">
-                  <img src="/logo.png" alt="PaperAI" className="h-8 w-8 object-contain" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-[#22C55E] to-[#16A34A] shadow-lg shadow-[#22C55E]/20">
+                  <img src="/logo.png" alt="PaperAI" className="h-10 w-10 object-contain" />
                 </div>
                 <motion.h1
                   className="text-lg font-semibold tracking-tight"
