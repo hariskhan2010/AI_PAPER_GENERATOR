@@ -74,9 +74,7 @@ export default function LoginPage() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' }}
             >
-              <div className="mb-2 inline-flex h-32 w-32 items-center justify-center rounded-xl bg-gradient-to-br from-[#22C55E] to-[#16A34A] shadow-lg shadow-[#22C55E]/20">
-                <img src="/logo.png" alt="PaperAI" className="h-28 w-28 object-contain" />
-              </div>
+              <img src="/logo.png" alt="PaperAI" className="mx-auto mb-2 h-40 w-40 object-contain" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
