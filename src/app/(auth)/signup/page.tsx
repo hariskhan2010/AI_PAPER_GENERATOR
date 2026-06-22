@@ -95,7 +95,7 @@ export default function SignupPage() {
               transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' }}
             >
               <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#22C55E] to-[#16A34A] shadow-lg shadow-[#22C55E]/20">
-                <img src="/logo.png" alt="PaperAI" className="h-8 w-8 object-contain" />
+                <img src="/logo.png" alt="PaperAI" className="h-16 w-16 object-contain" />
               </div>
             </motion.div>
             <motion.div
