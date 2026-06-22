@@ -94,7 +94,7 @@ export default function SignupPage() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' }}
             >
-              <img src="/logo.png" alt="PaperAI" className="mx-auto mb-2 h-48 w-48 object-contain" />
+              <img src="/logo.png" alt="PaperAI" className="mx-auto mb-2 h-80 w-80 object-contain" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
