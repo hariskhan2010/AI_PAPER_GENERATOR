@@ -66,7 +66,7 @@ export default function LoginPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: 'easeOut' }}
       >
-        <Card className="relative overflow-hidden border-[#0D2818] bg-[#0A0A0A] shadow-2xl shadow-black/40">
+        <Card className="relative overflow-hidden border-[#0D2818] bg-[#0A0A0A] shadow-2xl shadow-black/40 gap-0 py-0">
 
           <CardHeader className="pb-0 pt-2 text-center">
             <motion.div
