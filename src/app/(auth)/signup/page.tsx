@@ -88,7 +88,7 @@ export default function SignupPage() {
       >
         <Card className="relative overflow-hidden border-[#0D2818] bg-[#0A0A0A] shadow-2xl shadow-black/40">
 
-          <CardHeader className="pb-2 pt-10 text-center">
+          <CardHeader className="pb-1 pt-4 text-center">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -108,9 +108,9 @@ export default function SignupPage() {
             </motion.div>
           </CardHeader>
 
-          <CardContent className="px-8 pb-10">
+          <CardContent className="px-8 pb-6">
             <motion.div
-              className="space-y-4"
+              className="space-y-3"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
