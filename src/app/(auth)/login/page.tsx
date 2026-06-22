@@ -68,13 +68,13 @@ export default function LoginPage() {
       >
         <Card className="relative overflow-hidden border-[#0D2818] bg-[#0A0A0A] shadow-2xl shadow-black/40">
 
-          <CardHeader className="pb-1 pt-4 text-center">
+          <CardHeader className="pb-0 pt-2 text-center">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' }}
             >
-              <img src="/logo.png" alt="PaperAI" className="mx-auto mb-2 w-full max-w-sm object-contain" />
+              <img src="/logo.png" alt="PaperAI" className="mx-auto mb-0 w-full max-w-sm object-contain" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -84,13 +84,13 @@ export default function LoginPage() {
               <CardTitle className="text-2xl font-semibold tracking-tight text-white">
                 Welcome back
               </CardTitle>
-              <p className="mt-1 text-sm text-white/50">Sign in to your account</p>
+              <p className="mt-0 text-sm text-white/50">Sign in to your account</p>
             </motion.div>
           </CardHeader>
 
-          <CardContent className="px-8 pb-6">
+          <CardContent className="px-6 pb-4">
             <motion.div
-              className="space-y-3"
+              className="space-y-2"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
