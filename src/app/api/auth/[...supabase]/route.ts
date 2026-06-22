@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   const next = searchParams.get('next') ?? '/dashboard'
 
   const redirectTo = new URL(`${origin}${code ? next : '/login?error=auth_error'}`)
-  let supabaseResponse = NextResponse.redirect(redirectTo)
+  const response = NextResponse.redirect(redirectTo)
 
   if (code) {
     const supabase = createServerClient(
@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
           },
           setAll(cookiesToSet) {
             cookiesToSet.forEach(({ name, value, options }) =>
-              supabaseResponse.cookies.set(name, value, options)
+              response.cookies.set(name, value, options)
             )
           },
         },
@@ -30,5 +30,5 @@ export async function GET(request: NextRequest) {
     await supabase.auth.exchangeCodeForSession(code)
   }
 
-  return supabaseResponse
+  return response
 }

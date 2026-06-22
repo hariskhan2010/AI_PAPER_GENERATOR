@@ -71,7 +71,7 @@ export default function SignupPage() {
   const handleGoogleSignup = async () => {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: `${location.origin}/api/auth/callback` },
+      options: { redirectTo: `${location.origin}/auth/callback` },
     })
   }
 
