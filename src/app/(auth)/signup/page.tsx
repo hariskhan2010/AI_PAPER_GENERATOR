@@ -80,37 +80,39 @@ export default function SignupPage() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(34,197,94,0.06)_0%,transparent_60%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAyNHYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-40" />
 
-      <motion.div
-        className="w-full max-w-2xl px-4"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: 'easeOut' }}
-      >
-        <Card className="relative overflow-hidden border-[#0D2818] bg-[#0A0A0A] shadow-2xl shadow-black/40 gap-0 py-0">
-
-          <CardHeader className="pb-0 pt-0 text-center gap-0 px-6">
-            <motion.div
+      <div className="flex w-full max-w-2xl flex-col items-center px-4">
+        <motion.div
+          className="w-full"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
+          <Card className="relative overflow-hidden border-[#0D2818] bg-[#0A0A0A] shadow-2xl shadow-black/40 gap-0 py-0">
+            <motion.img
+              src="/auth-logo.png"
+              alt="PaperAI"
+              className="mx-auto mt-8 mb-4 h-24 w-24 object-contain"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' }}
-            >
-              <img src="/logo.png" alt="PaperAI" className="mx-auto mb-0 w-full max-w-sm object-contain" />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-            >
-              <CardTitle className="text-2xl font-semibold tracking-tight text-white">
-                Create your account
-              </CardTitle>
-              <p className="mt-0 text-sm text-white/50">Register your school</p>
-            </motion.div>
-          </CardHeader>
+            />
+
+            <CardHeader className="pb-0 pt-0 text-center gap-0 px-6">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+              >
+                <CardTitle className="text-2xl font-semibold tracking-tight text-white">
+                  Create your account
+                </CardTitle>
+                <p className="mt-0 text-sm text-white/50">Register your school</p>
+              </motion.div>
+            </CardHeader>
 
           <CardContent className="px-6 pb-4">
             <motion.div
-              className="space-y-2"
+              className="space-y-4"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -140,13 +142,13 @@ export default function SignupPage() {
                 </div>
               </motion.div>
 
-              <form onSubmit={handleSignup} className="space-y-3" autoComplete="off">
+              <form onSubmit={handleSignup} className="space-y-4" autoComplete="off">
                 {/* dummy fields to confuse Chrome autofill */}
                 <input type="text" name="fakename" className="hidden" aria-hidden="true" tabIndex={-1} />
                 <input type="email" name="fakeemail" className="hidden" aria-hidden="true" tabIndex={-1} />
                 <input type="password" name="fakepassword" className="hidden" aria-hidden="true" tabIndex={-1} />
 
-                <motion.div variants={itemVariants} className="space-y-1.5">
+                <motion.div variants={itemVariants} className="space-y-2">
                   <Label htmlFor="fullName" className="text-xs font-medium text-white/60">Full Name</Label>
                   <Input
                     id="fullName"
@@ -159,7 +161,7 @@ export default function SignupPage() {
                   />
                 </motion.div>
 
-                <motion.div variants={itemVariants} className="space-y-1.5">
+                <motion.div variants={itemVariants} className="space-y-2">
                   <Label htmlFor="schoolName" className="text-xs font-medium text-white/60">School Name</Label>
                   <Input
                     id="schoolName"
@@ -172,7 +174,7 @@ export default function SignupPage() {
                   />
                 </motion.div>
 
-                <motion.div variants={itemVariants} className="space-y-1.5">
+                <motion.div variants={itemVariants} className="space-y-2">
                   <Label htmlFor="city" className="text-xs font-medium text-white/60">City</Label>
                   <Input
                     id="city"
@@ -184,7 +186,7 @@ export default function SignupPage() {
                   />
                 </motion.div>
 
-                <motion.div variants={itemVariants} className="space-y-1.5">
+                <motion.div variants={itemVariants} className="space-y-2">
                   <Label htmlFor="signup-email" className="text-xs font-medium text-white/60">Email</Label>
                   <Input
                     id="signup-email"
@@ -198,7 +200,7 @@ export default function SignupPage() {
                   />
                 </motion.div>
 
-                <motion.div variants={itemVariants} className="space-y-1.5">
+                <motion.div variants={itemVariants} className="space-y-2">
                   <Label htmlFor="signup-password" className="text-xs font-medium text-white/60">Password</Label>
                   <Input
                     id="signup-password"
@@ -245,6 +247,7 @@ export default function SignupPage() {
           </CardContent>
         </Card>
       </motion.div>
+      </div>
     </div>
   )
 }
