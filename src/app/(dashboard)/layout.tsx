@@ -71,7 +71,7 @@ export default function DashboardLayout({
           }`}
         >
           <div className="flex h-28 items-center justify-between gap-2 px-4">
-              <div className="flex min-w-0 flex-1 items-center gap-3 overflow-hidden">
+              <div className="flex min-w-0 flex-1 items-center gap-1 overflow-hidden">
                 <img src="/logo.png" alt="PaperAI" className="h-24 w-24 shrink-0 object-contain" />
                 <motion.h1
                   className="min-w-0 truncate text-xl font-semibold tracking-tight"
