@@ -66,15 +66,15 @@ export default function DashboardLayout({
   return (
     <div className="flex min-h-screen bg-[#F8FAFC]">
         <aside
-          className={`fixed inset-y-0 left-0 z-50 w-64 bg-gradient-to-b from-[#0A0A0A] to-[#0F2E1A] text-white transition-transform duration-300 lg:relative lg:translate-x-0 ${
+          className={`fixed inset-y-0 left-0 z-50 w-64 shrink-0 overflow-hidden bg-gradient-to-b from-[#0A0A0A] to-[#0F2E1A] text-white transition-transform duration-300 lg:relative lg:translate-x-0 ${
             sidebarOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
-          <div className="flex items-center justify-between p-4 pb-2">
-              <div className="flex items-center gap-1">
-                <img src="/logo.png" alt="PaperAI" className="h-[200px] w-[200px] object-contain" />
+          <div className="flex h-16 items-center justify-between gap-2 px-4">
+              <div className="flex min-w-0 flex-1 items-center gap-2 overflow-hidden">
+                <img src="/logo.png" alt="PaperAI" className="h-10 w-10 shrink-0 object-contain" />
                 <motion.h1
-                  className="text-lg font-semibold tracking-tight"
+                  className="min-w-0 truncate text-base font-semibold tracking-tight sm:text-lg"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3 }}
@@ -174,7 +174,7 @@ export default function DashboardLayout({
         )}
       </AnimatePresence>
 
-      <div className="flex-1">
+      <div className="min-w-0 flex-1">
         <motion.header
           className="flex items-center gap-4 border-b bg-white px-6 py-3 lg:hidden"
           initial={{ y: -20, opacity: 0 }}
