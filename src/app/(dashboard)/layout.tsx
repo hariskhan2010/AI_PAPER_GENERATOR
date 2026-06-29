@@ -70,11 +70,11 @@ export default function DashboardLayout({
             sidebarOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
-          <div className="flex h-16 items-center justify-between gap-2 px-4">
-              <div className="flex min-w-0 flex-1 items-center gap-2 overflow-hidden">
-                <img src="/logo.png" alt="PaperAI" className="h-10 w-10 shrink-0 object-contain" />
+          <div className="flex h-28 items-center justify-between gap-2 px-4">
+              <div className="flex min-w-0 flex-1 items-center gap-3 overflow-hidden">
+                <img src="/logo.png" alt="PaperAI" className="h-24 w-24 shrink-0 object-contain" />
                 <motion.h1
-                  className="min-w-0 truncate text-base font-semibold tracking-tight sm:text-lg"
+                  className="min-w-0 truncate text-xl font-semibold tracking-tight"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3 }}
